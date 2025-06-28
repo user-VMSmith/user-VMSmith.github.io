@@ -1,0 +1,66 @@
+.modal-backdrop {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.15); /* lighter overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #999;
+    padding: 0.25rem;
+    line-height: 1;
+}
+
+.modal-close:hover {
+    color: black;
+}
+
+
+/* Match your .editor-input styling */
+.modal-content textarea {
+    width: 100%;
+    min-height: 6rem;
+    resize: vertical;
+    font-family: monospace;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+/* Matching my .editor-footer button */
+.modal-content button {
+    align-self: flex-end;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: rgba(255, 0, 255, 0.08);
+}

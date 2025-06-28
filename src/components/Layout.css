@@ -1,0 +1,12 @@
+.layout {
+    display: grid;
+    grid-template-columns: minmax(200px, 280px) 9fr minmax(200px, 280px);
+    gap: 1rem;
+    height: 100vh;
+}
+
+@media (max-width: 600px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+}

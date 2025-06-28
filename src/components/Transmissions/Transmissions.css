@@ -1,0 +1,126 @@
+.transmissions-sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+  overflow: hidden;
+}
+
+.transmissions-container,
+.search-container {
+  overflow-y: auto;
+  position: relative;
+}
+
+.transmissions-container h2,
+.search-container h2 {
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 0.5rem 0;
+  z-index: 5;
+  /*border-bottom: 1px solid #ccc;*/
+}
+
+.transmissions-container {
+  flex: 2 1 0;
+  margin-bottom: 1rem;
+}
+
+.search-container {
+  flex: 1 1 0;
+}
+
+.transmission-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem; /* space for delete btn */
+}
+
+.transmission-item input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  accent-color: rgba(255, 0, 255, 0.08);
+  cursor: pointer;
+}
+
+.transmission-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.transmissions-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+.transmissions-sidebar li {
+  margin-bottom: 1rem;
+}
+.transmissions-sidebar form {
+  margin-top: 1rem;
+}
+.transmissions-sidebar input[type="text"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.transmissions-sidebar label {
+  display: flex;
+  align-items: center;
+}
+
+.transmissions-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 10;
+}
+
+.new-transmission-button {
+  padding: 0.3rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  background-color: #f9f9f9;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.new-transmission-button:hover {
+  background-color: rgba(255, 0, 255, 0.08);
+  border-color: #aaa;
+}
+
+/* Delete button styling */
+.delete-transmission-button {
+  position: absolute;
+  top: 0.2rem;
+  left: 0;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: rgba(255, 0, 255, 1);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  line-height: 1;
+  padding: 0;
+}
+
+.transmission-item:hover .delete-transmission-button {
+  opacity: 1;
+}
+
+.delete-transmission-button:hover {
+  color: rgba(255, 0, 255, 1);
+}

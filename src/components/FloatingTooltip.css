@@ -1,0 +1,51 @@
+/*.floating-tooltip {*/
+/*  position: fixed;*/
+/*  bottom: 1rem;*/
+/*  right: 1rem;*/
+/*  background: white;*/
+/*  border: 1px solid #ccc;*/
+/*  border-radius: 0.5rem;*/
+/*  box-shadow: 0 0 6px rgba(0,0,0,0.1);*/
+/*  padding: 0.5rem;*/
+/*  display: flex;*/
+/*  gap: 0.5rem;*/
+/*  z-index: 999;*/
+/*}*/
+
+/*.floating-tooltip button {*/
+/*  background: none;*/
+/*  border: none;*/
+/*  font-size: 1.5rem;*/
+/*  cursor: pointer;*/
+/*}*/
+
+.floating-tooltip-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* don’t intercept clicks by default */
+  z-index: 998;
+}
+
+.floating-tooltip {
+  position: fixed;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  z-index: 999;
+  pointer-events: auto; /* allow interaction only on actual tooltip */
+}
+
+.floating-tooltip button {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0.2rem;
+}
