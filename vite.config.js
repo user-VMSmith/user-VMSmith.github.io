@@ -9,6 +9,6 @@ import react from '@vitejs/plugin-react'
 //   },
 // })
 export default defineConfig({
-  base: '/user-VMSith.github.io/',
+  base: '/',
   plugins: [react()],
 });
